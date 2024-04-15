@@ -14,13 +14,26 @@ public class Main {
 
         jsonParseFingerprints(fingerprints, "radio_map.json");
 
-        Fingerprint firstFinger = fingerprints.get(85);
-        fingerprints.remove(85);
+        Fingerprint firstFinger = fingerprints.get(144);
+        fingerprints.remove(144);
 
         Locator.PointF point = locator.getLocation(fingerprints, firstFinger);
 
-        System.out.println(firstFinger.center.x + " " + firstFinger.center.y);
-        System.out.println(String.format("%.6f", point.getX()) + " " + String.format("%.6f", point.getY()));
+        printResults(firstFinger, point);
+    }
+
+    private static void printResults(Fingerprint firstFinger, Locator.PointF point) {
+        // ANSI escape codes for bold red and bold turquoise
+        String boldRed = "\033[1;31m";
+        String boldTurquoise = "\033[1;36m";
+        String reset = "\033[0m"; // Reset to default color and style
+
+// Print user location input with values first, then descriptions in parentheses
+        System.out.println(boldRed + "(" +firstFinger.center.x + " | " + firstFinger.center.y +")" + reset + " (" + "User Location Input (X | Y)" + ")");
+
+// Print calculated user location with values first, then descriptions in parentheses
+        System.out.println(boldTurquoise +  "(" + String.format("%.6f", point.getX()) + " | " + String.format("%.6f", point.getY()) +")" + reset + " (" + "Calculated User Location to Nearest Fingerprint (X | Y)" + ")");
+
     }
 
     private static void jsonParseFingerprints(List<Fingerprint> fingerprints, String jsonFilePath) {

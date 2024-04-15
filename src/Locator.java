@@ -15,13 +15,12 @@ public class Locator
         float weightSum = 0;
 
         List<Fingerprint> fingerprints = getMarksWithSameAps2(fingerprintsDataSet, fingerprint);
-        float previousDistance = 0.0f;
 
         for (Fingerprint mark : fingerprints) {
             float distance = dissimilarity(fingerprint, mark);
             if(distance == Float.MIN_VALUE)
                 weight = 0;
-            else
+           else
                 weight = 1 / distance;
 
             x += weight * mark.center.x;
