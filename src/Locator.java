@@ -18,13 +18,13 @@ public class Locator
 
         for (Fingerprint mark : fingerprints) {
             float distance = dissimilarity(fingerprint, mark);
-            if(distance == Float.MIN_VALUE)
-                weight = 0;
-           else
+//            if(distance == Float.MIN_VALUE)
+//                weight = 0;
+//           else
                 weight = 1 / distance;
 
-            x += weight * mark.center.x;
-            y += weight * mark.center.y;
+            x += (float) (weight * mark.center.x);
+            y += (float) (weight * mark.center.y);
             weightSum += weight;
         }
 

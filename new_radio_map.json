@@ -1,0 +1,29 @@
+[
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -70,
+        "a4:2b:8c:97:31:6c": -82,
+        "30:91:8f:f5:02:43": -68,
+        "00:18:e7:fd:01:e2": -72,
+        "a4:2b:8c:97:31:6b": -81,
+        "20:bb:c0:1d:db:90": -75,
+        "c8:be:19:09:cb:c9": -59
+      },
+      "mCenter": {
+        "x": 184.78235,
+        "y": 32.023594
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  }
+]

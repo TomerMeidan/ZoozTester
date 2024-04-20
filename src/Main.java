@@ -8,14 +8,42 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
+
+        proximityPointFinding();
+        decreasingProximityPointFinding();
+    }
+
+    private static void decreasingProximityPointFinding() {
+        List<Fingerprint> fingerprint = new ArrayList<>();
+        List<Fingerprint> trainingPrints = new ArrayList<>();
+
+        Locator locator = new Locator();
+
+
+        jsonParseFingerprints(trainingPrints, "training.json");
+        Fingerprint firstFinger = trainingPrints.get(15);
+        trainingPrints.remove(15);
+
+        while(!trainingPrints.isEmpty()) {
+            Locator.PointF point = locator.getLocation(trainingPrints, firstFinger);
+            System.out.println("Number of k neighbours: " + trainingPrints.size());
+            printResults(firstFinger, point);
+            trainingPrints.remove(0);
+        }
+
+
+
+    }
+
+    private static void proximityPointFinding() {
         List<Fingerprint> fingerprints = new ArrayList<>();
 
         Locator locator = new Locator();
 
         jsonParseFingerprints(fingerprints, "radio_map.json");
 
-        Fingerprint firstFinger = fingerprints.get(144);
-        fingerprints.remove(144);
+        Fingerprint firstFinger = fingerprints.get(0);
+        fingerprints.remove(0);
 
         Locator.PointF point = locator.getLocation(fingerprints, firstFinger);
 
@@ -28,12 +56,20 @@ public class Main {
         String boldTurquoise = "\033[1;36m";
         String reset = "\033[0m"; // Reset to default color and style
 
-// Print user location input with values first, then descriptions in parentheses
-        System.out.println(boldRed + "(" +firstFinger.center.x + " | " + firstFinger.center.y +")" + reset + " (" + "User Location Input (X | Y)" + ")");
+        // Print user location input with values first, then descriptions in parentheses
+        System.out.print(boldRed + "(" +firstFinger.center.x + " , " + firstFinger.center.y +")" + reset);
 
-// Print calculated user location with values first, then descriptions in parentheses
-        System.out.println(boldTurquoise +  "(" + String.format("%.6f", point.getX()) + " | " + String.format("%.6f", point.getY()) +")" + reset + " (" + "Calculated User Location to Nearest Fingerprint (X | Y)" + ")");
+        // Print calculated user location with values first, then descriptions in parentheses
+        System.out.print(boldTurquoise +  "(" + String.format("%.6f", point.getX()) + " , " + String.format("%.6f", point.getY()) +")" + reset);
+        System.out.println(" Distance from point: " + calculateDistance(point.getX(), point.getY(), firstFinger.center.x, firstFinger.center.y));
 
+    }
+
+    public static double calculateDistance(double x1, double y1, double x2, double y2) {
+        double xDiff = x2 - x1;
+        double yDiff = y2 - y1;
+
+        return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
     }
 
     private static void jsonParseFingerprints(List<Fingerprint> fingerprints, String jsonFilePath) {

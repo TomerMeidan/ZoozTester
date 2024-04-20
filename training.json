@@ -1,0 +1,813 @@
+[
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -75,
+        "14:ae:db:4c:e7:2d": -79,
+        "06:ae:db:4c:e7:2d": -75,
+        "30:91:8f:f5:02:43": -66,
+        "00:18:e7:fd:01:e2": -76,
+        "20:bb:c0:1d:db:d0": -76,
+        "1c:af:f7:6d:9b:eb": -83,
+        "a4:2b:8c:97:31:6c": -82,
+        "a4:2b:8c:97:31:6b": -78,
+        "10:be:f5:34:e5:7e": -81,
+        "8c:79:67:9c:ff:c5": -87,
+        "c8:be:19:09:cb:c9": -69,
+        "20:bb:c0:1d:eb:20": -77
+      },
+      "mCenter": {
+        "x": 189.30963,
+        "y": 33.476013
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -74,
+        "30:91:8f:f5:02:43": -66,
+        "00:18:e7:fd:01:e2": -72,
+        "1c:af:f7:6d:9b:eb": -83,
+        "20:bb:c0:1d:db:90": -87,
+        "c4:ea:1d:0f:96:e9": -80,
+        "a4:2b:8c:97:31:6c": -88,
+        "a4:2b:8c:97:31:6b": -78,
+        "8c:79:67:9c:ff:c5": -87,
+        "c8:be:19:09:cb:c9": -67,
+        "20:bb:c0:1d:eb:20": -77
+      },
+      "mCenter": {
+        "x": 189.43616,
+        "y": 30.779629
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -74,
+        "30:91:8f:f5:02:43": -70,
+        "00:18:e7:fd:01:e2": -72,
+        "20:bb:c0:1d:db:90": -87,
+        "c4:ea:1d:0f:96:e9": -77,
+        "a4:2b:8c:97:31:6c": -89,
+        "a4:2b:8c:97:31:6b": -78,
+        "c8:be:19:09:cb:c9": -57,
+        "20:bb:c0:1d:eb:20": -77
+      },
+      "mCenter": {
+        "x": 188.98724,
+        "y": 31.31101
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "30:91:8f:f5:02:43": -72,
+        "00:18:e7:fd:01:e2": -75,
+        "c4:ea:1d:0f:96:e9": -78,
+        "a4:2b:8c:97:31:6c": -88,
+        "a4:2b:8c:97:31:6b": -81,
+        "c4:04:15:4b:ec:8a": -89,
+        "20:bb:c0:1d:eb:20": -84,
+        "c8:be:19:09:cb:c9": -66
+      },
+      "mCenter": {
+        "x": 188.33754,
+        "y": 34.969696
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "30:91:8f:f5:02:43": -78,
+        "00:18:e7:fd:01:e2": -79,
+        "c4:ea:1d:0f:96:e9": -78,
+        "a4:2b:8c:97:31:6c": -87,
+        "a4:2b:8c:97:31:6b": -75,
+        "c4:04:15:4b:ec:8a": -89,
+        "20:bb:c0:1d:eb:20": -84,
+        "c8:be:19:09:cb:c9": -64
+      },
+      "mCenter": {
+        "x": 185.61813,
+        "y": 34.967125
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -72,
+        "30:91:8f:f5:02:43": -61,
+        "00:18:e7:fd:01:e2": -75,
+        "c4:ea:1d:0f:96:e9": -73,
+        "a4:2b:8c:97:31:6c": -86,
+        "a4:2b:8c:97:31:6b": -75,
+        "c4:04:15:4b:ec:8a": -89,
+        "c8:be:19:09:cb:c9": -72
+      },
+      "mCenter": {
+        "x": 182.22949,
+        "y": 35.113693
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -72,
+        "a4:2b:8c:97:31:6c": -84,
+        "30:91:8f:f5:02:43": -66,
+        "00:18:e7:fd:01:e2": -74,
+        "a4:2b:8c:97:31:6b": -76,
+        "20:bb:c0:1d:eb:20": -84,
+        "c8:be:19:09:cb:c9": -61
+      },
+      "mCenter": {
+        "x": 183.40593,
+        "y": 34.649414
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:ea:1d:0f:96:e9": -76,
+        "a4:2b:8c:97:31:6c": -86,
+        "30:91:8f:f5:02:43": -64,
+        "00:18:e7:fd:01:e2": -68,
+        "c8:be:19:09:cb:c9": -57
+      },
+      "mCenter": {
+        "x": 183.7024,
+        "y": 33.322155
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -78,
+        "c4:ea:1d:0f:96:e9": -81,
+        "a4:2b:8c:97:31:6c": -88,
+        "30:91:8f:f5:02:43": -75,
+        "00:18:e7:fd:01:e2": -83,
+        "c8:be:19:09:cb:c9": -57
+      },
+      "mCenter": {
+        "x": 182.99382,
+        "y": 30.919086
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -70,
+        "c4:ea:1d:0f:96:e9": -75,
+        "a4:2b:8c:97:31:6c": -84,
+        "30:91:8f:f5:02:43": -71,
+        "00:18:e7:fd:01:e2": -75,
+        "20:bb:c0:1d:db:90": -81,
+        "c8:be:19:09:cb:c9": -61
+      },
+      "mCenter": {
+        "x": 182.86433,
+        "y": 33.536793
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -70,
+        "30:91:8f:f5:02:43": -62,
+        "00:18:e7:fd:01:e2": -74,
+        "20:bb:c0:1d:db:90": -81,
+        "c4:ea:1d:0f:96:e9": -80,
+        "a4:2b:8c:97:31:6c": -83,
+        "a4:2b:8c:97:31:6b": -71,
+        "c8:be:19:09:cb:c9": -62
+      },
+      "mCenter": {
+        "x": 182.57253,
+        "y": 35.55215
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -70,
+        "30:91:8f:f5:02:43": -57,
+        "00:18:e7:fd:01:e2": -80,
+        "20:bb:c0:1d:db:90": -76,
+        "c4:ea:1d:0f:96:e9": -75,
+        "a4:2b:8c:97:31:6c": -87,
+        "20:bb:c0:1d:eb:20": -82,
+        "c8:be:19:09:cb:c9": -63
+      },
+      "mCenter": {
+        "x": 182.8433,
+        "y": 34.013195
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -80,
+        "30:91:8f:f5:02:43": -67,
+        "00:18:e7:fd:01:e2": -77,
+        "20:bb:c0:1d:db:90": -76,
+        "c4:ea:1d:0f:96:e9": -79,
+        "a4:2b:8c:97:31:6c": -84,
+        "a4:2b:8c:97:31:6b": -78,
+        "20:bb:c0:1d:eb:20": -82,
+        "c8:be:19:09:cb:c9": -58
+      },
+      "mCenter": {
+        "x": 183.40884,
+        "y": 30.719013
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -73,
+        "30:91:8f:f5:02:43": -63,
+        "00:18:e7:fd:01:e2": -77,
+        "20:bb:c0:1d:db:90": -86,
+        "c4:ea:1d:0f:96:e9": -73,
+        "a4:2b:8c:97:31:6c": -85,
+        "a4:2b:8c:97:31:6b": -83,
+        "20:bb:c0:1d:eb:20": -81,
+        "c8:be:19:09:cb:c9": -67
+      },
+      "mCenter": {
+        "x": 182.40282,
+        "y": 34.374134
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -74,
+        "30:91:8f:f5:02:43": -78,
+        "00:18:e7:fd:01:e2": -66,
+        "20:bb:c0:1d:db:90": -86,
+        "c4:ea:1d:0f:96:e9": -71,
+        "a4:2b:8c:97:31:6c": -80,
+        "a4:2b:8c:97:31:6b": -78,
+        "c8:be:19:09:cb:c9": -64
+      },
+      "mCenter": {
+        "x": 183.44244,
+        "y": 30.532877
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -70,
+        "a4:2b:8c:97:31:6c": -82,
+        "30:91:8f:f5:02:43": -68,
+        "00:18:e7:fd:01:e2": -72,
+        "a4:2b:8c:97:31:6b": -81,
+        "20:bb:c0:1d:db:90": -75,
+        "c8:be:19:09:cb:c9": -59
+      },
+      "mCenter": {
+        "x": 184.78235,
+        "y": 32.023594
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -78,
+        "30:91:8f:f5:02:43": -69,
+        "00:18:e7:fd:01:e2": -76,
+        "20:bb:c0:1d:db:90": -75,
+        "c4:ea:1d:0f:96:e9": -73,
+        "a4:2b:8c:97:31:6c": -81,
+        "a4:2b:8c:97:31:6b": -81,
+        "c8:be:19:09:cb:c9": -60
+      },
+      "mCenter": {
+        "x": 185.83133,
+        "y": 31.071516
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -78,
+        "30:91:8f:f5:02:43": -63,
+        "00:18:e7:fd:01:e2": -78,
+        "20:bb:c0:1d:db:90": -82,
+        "c4:ea:1d:0f:96:e9": -79,
+        "a4:2b:8c:97:31:6c": -88,
+        "a4:2b:8c:97:31:6b": -81,
+        "c8:be:19:09:cb:c9": -57
+      },
+      "mCenter": {
+        "x": 185.99165,
+        "y": 31.732347
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -78,
+        "06:ae:db:4c:e7:2d": -86,
+        "30:91:8f:f5:02:43": -64,
+        "00:18:e7:fd:01:e2": -76,
+        "20:bb:c0:1d:db:90": -82,
+        "c4:ea:1d:0f:96:e9": -79,
+        "a4:2b:8c:97:31:6c": -84,
+        "a4:2b:8c:97:31:6b": -69,
+        "c8:be:19:09:cb:c9": -57
+      },
+      "mCenter": {
+        "x": 186.16638,
+        "y": 33.76456
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -69,
+        "06:ae:db:4c:e7:2d": -86,
+        "30:91:8f:f5:02:43": -56,
+        "00:18:e7:fd:01:e2": -76,
+        "20:bb:c0:1d:db:90": -82,
+        "c4:ea:1d:0f:96:e9": -77,
+        "a4:2b:8c:97:31:6c": -82,
+        "a4:2b:8c:97:31:6b": -69,
+        "c8:be:19:09:cb:c9": -63
+      },
+      "mCenter": {
+        "x": 186.03764,
+        "y": 35.795788
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "14:ae:db:4c:e7:2d": -79,
+        "a4:2b:8c:97:31:6c": -85,
+        "30:91:8f:f5:02:43": -71,
+        "00:18:e7:fd:01:e2": -72,
+        "a4:2b:8c:97:31:6b": -73,
+        "20:bb:c0:1d:db:90": -75,
+        "c8:be:19:09:cb:c9": -64
+      },
+      "mCenter": {
+        "x": 185.531,
+        "y": 34.412766
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -71,
+        "14:ae:db:4c:e7:2d": -84,
+        "06:ae:db:4c:e7:2d": -87,
+        "30:91:8f:f5:02:43": -70,
+        "20:bb:c0:1d:db:d0": -84,
+        "00:18:e7:fd:01:e2": -75,
+        "c4:ea:1d:0f:96:e9": -82,
+        "a4:2b:8c:97:31:6c": -82,
+        "a4:2b:8c:97:31:6b": -78,
+        "c8:be:19:09:cb:c9": -69
+      },
+      "mCenter": {
+        "x": 189.3425,
+        "y": 35.094414
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "00:18:e7:fd:01:e2": -76,
+        "a4:2b:8c:97:31:6c": -89,
+        "c8:be:19:09:cb:c9": -65,
+        "30:91:8f:f5:02:43": -73
+      },
+      "mCenter": {
+        "x": 188.86522,
+        "y": 29.700315
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -79,
+        "a4:2b:8c:97:31:6c": -82,
+        "30:91:8f:f5:02:43": -68,
+        "a4:2b:8c:97:31:6b": -76,
+        "00:18:e7:fd:01:e2": -71,
+        "c8:be:19:09:cb:c9": -59
+      },
+      "mCenter": {
+        "x": 186.15155,
+        "y": 29.813911
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -76,
+        "a4:2b:8c:97:31:6c": -82,
+        "f4:83:cd:55:e9:56": -91,
+        "30:91:8f:f5:02:43": -70,
+        "a4:2b:8c:97:31:6b": -76,
+        "00:18:e7:fd:01:e2": -71,
+        "c8:be:19:09:cb:c9": -54
+      },
+      "mCenter": {
+        "x": 183.43704,
+        "y": 29.711006
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -74,
+        "30:91:8f:f5:02:43": -68,
+        "00:18:e7:fd:01:e2": -85,
+        "20:bb:c0:1d:db:90": -87,
+        "c4:ea:1d:0f:96:e9": -74,
+        "a4:2b:8c:97:31:6c": -82,
+        "f4:83:cd:55:e9:56": -91,
+        "a4:2b:8c:97:31:6b": -76,
+        "c8:be:19:09:cb:c9": -54
+      },
+      "mCenter": {
+        "x": 184.04825,
+        "y": 29.923746
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -76,
+        "30:91:8f:f5:02:43": -72,
+        "00:18:e7:fd:01:e2": -85,
+        "20:bb:c0:1d:db:90": -87,
+        "c4:ea:1d:0f:96:e9": -74,
+        "a4:2b:8c:97:31:6c": -82,
+        "f4:83:cd:55:e9:56": -91,
+        "a4:2b:8c:97:31:6b": -76,
+        "c8:be:19:09:cb:c9": -64
+      },
+      "mCenter": {
+        "x": 186.07877,
+        "y": 29.727522
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -79,
+        "c4:ea:1d:0f:96:e9": -81,
+        "a4:2b:8c:97:31:6c": -82,
+        "30:91:8f:f5:02:43": -69,
+        "a4:2b:8c:97:31:6b": -80,
+        "00:18:e7:fd:01:e2": -75,
+        "c8:be:19:09:cb:c9": -63
+      },
+      "mCenter": {
+        "x": 186.75104,
+        "y": 29.625273
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  },
+  {
+    "CLASSNAME": "Fingerprint",
+    "INSTANCE": {
+      "mWiFiFingerprint": {
+        "c4:12:f5:fd:8d:a6": -73,
+        "c4:ea:1d:0f:96:e9": -81,
+        "a4:2b:8c:97:31:6c": -83,
+        "30:91:8f:f5:02:43": -69,
+        "a4:2b:8c:97:31:6b": -80,
+        "00:18:e7:fd:01:e2": -82,
+        "c8:be:19:09:cb:c9": -62
+      },
+      "mCenter": {
+        "x": 188.7469,
+        "y": 29.802633
+      },
+      "mRadius": 0.05,
+      "mColor": -16776961,
+      "mColor4f": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "mIsRemoved": false
+    }
+  }
+]
