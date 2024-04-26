@@ -1,13 +1,23 @@
 import java.util.*;
 
-public class Locator
-{
+/**
+ * A class to locate a point based on a set of fingerprints.
+ * The location is determined by calculating the dissimilarity between fingerprints and using a weighted average of coordinates.
+ */
+public class Locator {
     private static int MIN_RSS_TO_COUNT = -75;
     private static int NEIGHBOUR_MIN_SCORE = -1;
     private static int RSS_OFFSET = 100;
 
+    /**
+     * Calculates the location of a given fingerprint based on the dissimilarity to other fingerprints in the dataset.
+     * The location is determined by weighted averages of the x and y coordinates of fingerprints with a high score.
+     *
+     * @param fingerprintsDataSet A list of fingerprints to be used as a reference dataset.
+     * @param fingerprint The fingerprint for which the location is to be calculated.
+     * @return A PointF object representing the calculated location.
+     */
     public PointF getLocation(List<Fingerprint> fingerprintsDataSet, Fingerprint fingerprint){
-
         PointF point = new PointF();
 
         float x = 0, y = 0;
@@ -18,10 +28,7 @@ public class Locator
 
         for (Fingerprint mark : fingerprints) {
             float distance = dissimilarity(fingerprint, mark);
-//            if(distance == Float.MIN_VALUE)
-//                weight = 0;
-//           else
-                weight = 1 / distance;
+            weight = 1 / distance;
 
             x += (float) (weight * mark.center.x);
             y += (float) (weight * mark.center.y);
@@ -33,6 +40,14 @@ public class Locator
         return point;
     }
 
+    /**
+     * Calculates the dissimilarity between two fingerprints based on the Euclidean distance of their signal strengths.
+     * The dissimilarity is calculated as the square root of the sum of squared differences in signal strengths.
+     *
+     * @param actual The fingerprint to be compared.
+     * @param reference The reference fingerprint against which the actual fingerprint is compared.
+     * @return A float value representing the dissimilarity between the two fingerprints.
+     */
     public static float dissimilarity(Fingerprint actual, Fingerprint reference) {
         float difference = 0.0f;
         int distanceSq = 0;
@@ -40,7 +55,6 @@ public class Locator
 
         if (actual == null || reference == null) return Float.MAX_VALUE;
 
-        // Calculate dissimilarity between signal strengths
         for (String mac : actual.keySet()) {
             if (reference.containsKey(mac)) {
                 bssidLevelDiff = actual.get(mac) - reference.get(mac);
@@ -59,11 +73,18 @@ public class Locator
         }
 
         difference = (float) Math.sqrt(distanceSq);
-        // division by zero handling:
         if (difference == 0.0f) difference = Float.MIN_VALUE;
         return difference;
     }
 
+    /**
+     * Filters a list of fingerprints to include only those with a score higher than a specified minimum score.
+     * The score is calculated based on the number of Access Points (APs) with a minimum RSSI.
+     *
+     * @param fingerprints A list of fingerprints to be filtered.
+     * @param fingerprint The fingerprint used as a reference for scoring.
+     * @return A list of fingerprints that have a score higher than the specified minimum score.
+     */
     public static List<Fingerprint> getMarksWithSameAps2(List<Fingerprint> fingerprints, Fingerprint fingerprint) {
         NavigableMap<Integer, List<Fingerprint>> fingerprintsByScore = new TreeMap<>(Collections.<Integer>reverseOrder());
 
@@ -89,11 +110,19 @@ public class Locator
         return bestFingerprints;
     }
 
+    /**
+     * Calculates a score for a fingerprint based on the number of Access Points (APs) with a minimum RSSI.
+     * The score is calculated as the number of common APs multiplied by 2 minus the number of unique APs in the fingerprint and the reference fingerprint.
+     *
+     * @param fingerprint The fingerprint for which the score is to be calculated.
+     * @param refFp The reference fingerprint used for comparison.
+     * @return An integer representing the score of the fingerprint.
+     */
     public static int score(Fingerprint fingerprint, Fingerprint refFp) {
         Set<String> fingerprintAps = getApsWithMinRSS(fingerprint, MIN_RSS_TO_COUNT);
         Set<String> refFpAps = getApsWithMinRSS(refFp, MIN_RSS_TO_COUNT);
 
-        Set<String> intersection = new HashSet<>(fingerprintAps); // use the copy constructor
+        Set<String> intersection = new HashSet<>(fingerprintAps);
         intersection.retainAll(refFpAps);
 
         fingerprintAps.removeAll(intersection);
@@ -102,6 +131,14 @@ public class Locator
         return intersection.size() * 2 - fingerprintAps.size() - refFpAps.size();
     }
 
+    /**
+     * Identifies Access Points (APs) in a fingerprint that have a signal strength (RSSI) above a specified minimum value.
+     * APs with RSSI below the minimum are considered weak and are not included in the returned set.
+     *
+     * @param fp The fingerprint from which APs are to be identified.
+     * @param minRSS The minimum RSSI value for an AP to be considered strong.
+     * @return A set of MAC addresses of APs with RSSI above the minimum value.
+     */
     public static Set<String> getApsWithMinRSS(Fingerprint fp, int minRSS) {
         Set<String> strongAps = new HashSet<>();
         Set<String> weakAps = new HashSet<>();
@@ -117,38 +154,65 @@ public class Locator
             }
         }
 
-        // If not enough strong Aps, use weak as well
         if (strongAps.size() < 3) {
             strongAps.addAll(weakAps);
         }
         return strongAps;
     }
 
+    /**
+     * Represents a point in a two-dimensional space with floating-point coordinates.
+     * This class is used to store the calculated location of a fingerprint.
+     */
     public class PointF {
         private double x;
         private double y;
 
+        /**
+         * Gets the x-coordinate of the point.
+         *
+         * @return The x-coordinate of the point.
+         */
         public double getX() {
             return x;
         }
 
+        /**
+         * Sets the x-coordinate of the point.
+         *
+         * @param x The x-coordinate to set.
+         */
         public void setX(double x) {
             this.x = x;
         }
 
+        /**
+         * Gets the y-coordinate of the point.
+         *
+         * @return The y-coordinate of the point.
+         */
         public double getY() {
             return y;
         }
 
+        /**
+         * Sets the y-coordinate of the point.
+         *
+         * @param y The y-coordinate to set.
+         */
         public void setY(double y) {
             this.y = y;
         }
 
+        /**
+         * Sets both the x and y coordinates of the point.
+         *
+         * @param x The x-coordinate to set.
+         * @param y The y-coordinate to set.
+         */
         public void set(double x, double y) {
             this.x = x;
             this.y = y;
         }
     }
-
-
 }
