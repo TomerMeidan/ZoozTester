@@ -11,24 +11,29 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) {
-        // Demonstrate the use of the Locator class for finding proximity points
-        proximityPointFinding();
-        decreasingProximityPointFinding();
+
+        // Test 1 - Finding a removed fingerprint from set
+        System.out.println("\nTest: Demonstrate the use of the Locator class for finding proximity points \n");
+        proximityPointFinding(0);
+
+        // Test 2 - Cluster Knn fingerprint reduction
+        System.out.println("\nTest: Demonstrate the use of the different clusters for finding proximity points \n");
+        decreasingProximityPointFinding(15);
     }
 
     /**
      * Demonstrates the process of finding a point of interest based on decreasing proximity to fingerprints.
      * It iteratively removes the closest fingerprint and recalculates the location until only one fingerprint remains.
      */
-    private static void decreasingProximityPointFinding() {
+    private static void decreasingProximityPointFinding(int removedFingerPrintIndex) {
         List<Fingerprint> fingerprint = new ArrayList<>();
         List<Fingerprint> trainingPrints = new ArrayList<>();
 
         Locator locator = new Locator();
 
         jsonParseFingerprints(trainingPrints, "training.json");
-        Fingerprint firstFinger = trainingPrints.get(15);
-        trainingPrints.remove(15);
+        Fingerprint firstFinger = trainingPrints.get(removedFingerPrintIndex);
+        trainingPrints.remove(removedFingerPrintIndex);
 
         while(!trainingPrints.isEmpty()) {
             Locator.PointF point = locator.getLocation(trainingPrints, firstFinger);
@@ -42,40 +47,40 @@ public class Main {
      * Demonstrates the process of finding a point of interest based on proximity to fingerprints.
      * It calculates the location of a point of interest based on the remaining fingerprints.
      */
-    private static void proximityPointFinding() {
+    private static void proximityPointFinding(int removedFingerPrintIndex) {
         List<Fingerprint> fingerprints = new ArrayList<>();
 
         Locator locator = new Locator();
 
         jsonParseFingerprints(fingerprints, "radio_map.json");
 
-        Fingerprint firstFinger = fingerprints.get(0);
-        fingerprints.remove(0);
+        Fingerprint removedFingerPrint = fingerprints.get(removedFingerPrintIndex);
+        fingerprints.remove(removedFingerPrintIndex);
 
-        Locator.PointF point = locator.getLocation(fingerprints, firstFinger);
+        Locator.PointF point = locator.getLocation(fingerprints, removedFingerPrint);
 
-        printResults(firstFinger, point);
+        printResults(removedFingerPrint, point);
     }
 
     /**
      * Prints the results of the location finding process, including the original fingerprint location and the calculated location.
      * It also calculates and prints the distance from the original location to the calculated location.
      *
-     * @param firstFinger The original fingerprint used for the location finding process.
+     * @param removedFingerPrint The original fingerprint used for the location finding process.
      * @param point The calculated location based on the remaining fingerprints.
      */
-    private static void printResults(Fingerprint firstFinger, Locator.PointF point) {
+    private static void printResults(Fingerprint removedFingerPrint, Locator.PointF point) {
         // ANSI escape codes for bold red and bold turquoise
         String boldRed = "\033[1;31m";
         String boldTurquoise = "\033[1;36m";
         String reset = "\033[0m"; // Reset to default color and style
 
         // Print user location input with values first, then descriptions in parentheses
-        System.out.print(boldRed + "(" +firstFinger.center.x + " , " + firstFinger.center.y +")" + reset);
+        System.out.print(boldRed + "Expected FingerPrint: (" +removedFingerPrint.center.x + " , " + removedFingerPrint.center.y +")" + reset + " | ");
 
         // Print calculated user location with values first, then descriptions in parentheses
-        System.out.print(boldTurquoise + "(" + String.format("%.6f", point.getX()) + " , " + String.format("%.6f", point.getY()) +")" + reset);
-        System.out.println(" Distance from point: " + calculateDistance(point.getX(), point.getY(), firstFinger.center.x, firstFinger.center.y));
+        System.out.print(boldTurquoise + "Actual FingerPrint:(" + String.format("%.6f", point.getX()) + " , " + String.format("%.6f", point.getY()) +")" + reset);
+        System.out.println(" Distance from point: " + calculateDistance(point.getX(), point.getY(), removedFingerPrint.center.x, removedFingerPrint.center.y));
     }
 
     /**
