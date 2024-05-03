@@ -5,6 +5,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
+import java.util.Random;
 
 /**
  * The main class to demonstrate the use of the Locator class for finding proximity points based on fingerprints.
@@ -15,10 +16,17 @@ public class Main {
         // Test 1 - Finding a removed fingerprint from set
         System.out.println("\nTest: Demonstrate the use of the Locator class for finding proximity points \n");
         proximityPointFinding(0);
+        testProximityLocation(15,750);
 
         // Test 2 - Cluster Knn fingerprint reduction
         System.out.println("\nTest: Demonstrate the use of the different clusters for finding proximity points \n");
         decreasingProximityPointFinding(15);
+    }
+
+    private static void testProximityLocation(int numberOfTests, int bound) {
+        Random rand = new Random();
+        for(int i = 0 ; i < numberOfTests ; i++)
+            proximityPointFinding(rand.nextInt(bound));
     }
 
     /**
@@ -26,7 +34,6 @@ public class Main {
      * It iteratively removes the closest fingerprint and recalculates the location until only one fingerprint remains.
      */
     private static void decreasingProximityPointFinding(int removedFingerPrintIndex) {
-        List<Fingerprint> fingerprint = new ArrayList<>();
         List<Fingerprint> trainingPrints = new ArrayList<>();
 
         Locator locator = new Locator();
@@ -37,7 +44,7 @@ public class Main {
 
         while(!trainingPrints.isEmpty()) {
             Locator.PointF point = locator.getLocation(trainingPrints, firstFinger);
-            System.out.println("Number of k neighbours: " + trainingPrints.size());
+            System.out.println("Number of neighbours: " + trainingPrints.size());
             printResults(firstFinger, point);
             trainingPrints.remove(0);
         }
