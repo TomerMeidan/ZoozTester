@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * The main class to demonstrate the use of the Locator class for finding proximity points based on fingerprints.
@@ -16,11 +17,24 @@ public class Main {
         // Test 1 - Finding a removed fingerprint from set
         System.out.println("\nTest: Demonstrate the use of the Locator class for finding proximity points \n");
         proximityPointFinding(0);
+        next("\nPress Enter To Continue... \n");
+
+        // Test 1.1 - Finding an X amount of removed fingerprint from set
+        System.out.println("\nTest: Demonstrate the use of the Locator class for finding proximity points \n");
         testProximityLocation(15,750);
+        next("\nPress Enter To Continue... \n");
 
         // Test 2 - Cluster Knn fingerprint reduction
         System.out.println("\nTest: Demonstrate the use of the different clusters for finding proximity points \n");
         decreasingProximityPointFinding(15);
+        next("\nPress Enter To Finish Program... \n");
+
+
+    }
+
+    private static void next(String x) {
+        System.out.println(x);
+        new Scanner(System.in).nextLine();
     }
 
     private static void testProximityLocation(int numberOfTests, int bound) {

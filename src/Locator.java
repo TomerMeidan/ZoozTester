@@ -18,56 +18,56 @@ public class Locator {
      * @return A PointF object representing the calculated location.
      */
     public PointF getLocation(List<Fingerprint> fingerprintsDataSet, Fingerprint fingerprint){
-        PointF point = new PointF();
+        PointF fingerprintLocation = new PointF();
 
         float x = 0, y = 0;
         float weight;
         float weightSum = 0;
 
-        List<Fingerprint> fingerprints = getMarksWithSameAps2(fingerprintsDataSet, fingerprint);
+        List<Fingerprint> subsetNeighbourFingerprints = getMarksWithSameAps2(fingerprintsDataSet, fingerprint);
 
-        for (Fingerprint mark : fingerprints) {
-            float distance = dissimilarity(fingerprint, mark);
+        for (Fingerprint neighbour : subsetNeighbourFingerprints) {
+            float distance = dissimilarity(fingerprint, neighbour);
             weight = 1 / distance;
 
-            x += (float) (weight * mark.center.x);
-            y += (float) (weight * mark.center.y);
+            x += (float) (weight * neighbour.center.x);
+            y += (float) (weight * neighbour.center.y);
             weightSum += weight;
         }
 
-        point.set(x / weightSum, y / weightSum);
+        fingerprintLocation.set(x / weightSum, y / weightSum);
 
-        return point;
+        return fingerprintLocation;
     }
 
     /**
      * Calculates the dissimilarity between two fingerprints based on the Euclidean distance of their signal strengths.
      * The dissimilarity is calculated as the square root of the sum of squared differences in signal strengths.
      *
-     * @param actual The fingerprint to be compared.
+     * @param neighbour The fingerprint to be compared.
      * @param reference The reference fingerprint against which the actual fingerprint is compared.
      * @return A float value representing the dissimilarity between the two fingerprints.
      */
-    public static float dissimilarity(Fingerprint actual, Fingerprint reference) {
+    public static float dissimilarity(Fingerprint neighbour, Fingerprint reference) {
         float difference = 0.0f;
         int distanceSq = 0;
         int bssidLevelDiff;
 
-        if (actual == null || reference == null) return Float.MAX_VALUE;
+        if (neighbour == null || reference == null) return Float.MAX_VALUE;
 
-        for (String mac : actual.keySet()) {
-            if (reference.containsKey(mac)) {
-                bssidLevelDiff = actual.get(mac) - reference.get(mac);
+        for (String apMacAddress : neighbour.keySet()) {
+            if (reference.containsKey(apMacAddress)) {
+                bssidLevelDiff = neighbour.get(apMacAddress) - reference.get(apMacAddress);
             } else {
-                bssidLevelDiff = actual.get(mac) + RSS_OFFSET;
+                bssidLevelDiff = neighbour.get(apMacAddress) + RSS_OFFSET;
             }
 
             distanceSq += bssidLevelDiff * bssidLevelDiff;
         }
 
-        for (String mac : reference.keySet()) {
-            if (!actual.containsKey(mac)) {
-                bssidLevelDiff = reference.get(mac) + RSS_OFFSET;
+        for (String apMacAddress : reference.keySet()) {
+            if (!neighbour.containsKey(apMacAddress)) {
+                bssidLevelDiff = reference.get(apMacAddress) + RSS_OFFSET;
                 distanceSq += bssidLevelDiff * bssidLevelDiff;
             }
         }
@@ -92,11 +92,7 @@ public class Locator {
             final int score = score(fingerprint, f);
 
             if (score > NEIGHBOUR_MIN_SCORE) {
-                List<Fingerprint> list = fingerprintsByScore.get(score);
-                if (list == null) {
-                    list = new ArrayList<>();
-                    fingerprintsByScore.put(score, list);
-                }
+                List<Fingerprint> list = fingerprintsByScore.computeIfAbsent(score, k -> new ArrayList<>());
                 list.add(f);
             }
         }
@@ -104,7 +100,7 @@ public class Locator {
         List<Fingerprint> bestFingerprints = new ArrayList<>();
         for (List<Fingerprint> goodFingerprints : fingerprintsByScore.values()) {
             bestFingerprints.addAll(goodFingerprints);
-            if (bestFingerprints.size() > 0) break;
+            if (!bestFingerprints.isEmpty()) break;
         }
 
         return bestFingerprints;
