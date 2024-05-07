@@ -3,8 +3,11 @@
 ## Overview
 ZoozTester investigates the minimal number of Received Signal Strength Indicator (RSSI) fingerprints required for effective indoor localization. This project addresses the limitations of GPS in enclosed spaces and evaluates the potential for using minimal data points to achieve accurate localization using existing WiFi networks.
 
-## Capstone - Video Link To Project
-[Video Link](https://drive.google.com/file/d/1rGSRFR5_7J_M6lbS6WwAk0f_0UcLmhqj/view?usp=sharing)
+## Capstone Files
+- [Project's Book Link](https://drive.google.com/file/d/19MvYYf7wqjZF04o365ht7Ua8fICXXWDz/view?usp=sharing)
+- [Presentation Link](https://docs.google.com/presentation/d/1N08a1otKGYcm9LxSUrJsosQkpqJmxCaB/edit?usp=sharing&ouid=118289805697087116016&rtpof=true&sd=true)
+- [Video Link](https://drive.google.com/file/d/1rGSRFR5_7J_M6lbS6WwAk0f_0UcLmhqj/view?usp=sharing)
+
 ## Research Objectives
 - **Optimization of Data Requirements**: Determine the minimal number of RSSI fingerprints necessary for dependable indoor localization.
 - **Cost-Effective and Efficient Indoor Navigation**: Use minimal data to reduce costs and enhance processing speed in indoor navigation systems.
